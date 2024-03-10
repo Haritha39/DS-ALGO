@@ -26,3 +26,10 @@ x = 123
 left_shift = x << 3 # g = x * 2^3
 right_shift = x >> 3 # g = x / 2^3
 print(x, left_shift, right_shift)
+
+def main():
+    print("This is from main method")
+
+if __name__ == "__main__":
+    main()
+    
