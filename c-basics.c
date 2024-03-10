@@ -62,5 +62,57 @@ int main(){
     fgets(input_s, 5, stdin); //Check for EOF or max len in second param
     printf("\nfgetc inputs s = %s\n", input_s);
 
+    //ARRAYS
+    int array[] = {1,2,3,4,5,6};
+    printf("\n ARRAY \n");
+    printf("\n size of array int(4 bytes) : %d\n", sizeof(array));
+    for(int k=0; k<(sizeof(array)/ sizeof(array[0])) ; k++){
+        printf("%d\t", array[k]);
+    }
+    /* Basically, “array” is a “pointer to the first element of array” but “&array” is a “pointer to whole array of 5 int”. 
+    Since “array” is pointer to int, addition of 1 resulted in an address with increment of 4 (assuming int size in your machine is 4 bytes). 
+    Since “&array” is pointer to array of 5 ints, addition of 1 resulted in an address with increment of 4 x 5 = 20 = 0x14.*/
+    /*Here the pointer arithmetic does its part. We don’t need to explicitly convert each of the locations to character pointers.
+
+    &arr ==> Pointer to an array of 6 elements. [See this for difference between &arr and arr]
+
+    (&arr + 1) ==> Address of 6 integers ahead as pointer type is pointer to array of 6 integers.
+
+    *(&arr + 1) ==> Same address as (&arr + 1), but type of pointer is "int *".
+
+    *(&arr + 1) - arr ==> Since *(&arr + 1) points to the address 6 integers ahead of arr, the difference between two is 6.*/
+    printf("\narray : %d\n", array); //return address of start of the array same as 0th element
+    printf("\n&array : %d\n", &array); //return address of start of the array same as 0th element
+    printf("\n*(&array) : %d\n", *(&array)); //return address of start of the array same as 0th element
+    printf("\n&array[0]: %d\n", &array[0]); // returns zero element address
+    printf("\n*(&array[0]): %d\n", *(&array[0])); // returns zero element address 
+    printf("\n&array[1] : %d\n", &array[1]); // returns first element address
+    printf("\n*(&array[1]): %d\n", *(&array[1])); // returns first element address
+    printf("\n*array : %d\n", *array); // returns 1
+    printf("\n&array + 1 : %d\n", &array + 1); // return address of end of the array 
+    printf("\n&array + 2 : %d\n", &array + 2); // return address of end of the array 
+    printf("\n*(&array + 1) : %d\n", *(&array + 1)); // return address of end of the array
+    printf("\n*(&array[5]) : %d\n", *(&array[5])); // return 6
+    printf("\n(&array[5]) : %d\n", (&array[5])); // return address of 5th element
+    printf("\n(&array[6]) : %d\n", (&array[6])); // return address of end of the array i.e., arr[length]
+    printf("\n(&array + 1) : %d\n", (&array + 1)); // return address of end of the array i.e., arr[length]
+    printf("\n(*(&array + 1) - array) length : %d\n", (*(&array + 1) - array)); // returns length
+    printf("\n(*(&array +2) - array) length : %d\n", (*(&array +2) - array)); // double of length
+    printf("\n((&array + 1) - &array) : %d\n", ((&array + 1) - &array)); // returns 1
+    printf("\n(*(&array + 1) - *(&array)) : %d\n", (*(&array + 1) - *(&array))); // returns length
+    printf("\n((array + 1) - array) : %d\n", ((array + 1) - array)); // returns 1
+    printf("\n((array + 2) - array) : %d\n", ((array + 2) - array)); // returns 2
+    printf("\narray+1: %d\n", array +1);
+    printf("\n*array: %d\n", *array);
+
+    int *t = *(&array + 1);
+    int *f = array;
+    int length_of_array = t - f;
+    printf("\n t : %d\n", t);
+    printf("\n f : %d\n", f);
+    printf("\n *t : %d\n", *t);
+    printf("\n *f : %d\n", *f);
+    printf("\n simple length p-f : %d\n", length_of_array);
+
     return 0;
 }
