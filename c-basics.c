@@ -105,9 +105,9 @@ int main(){
     printf("\narray+1: %d\n", array +1);
     printf("\n*array: %d\n", *array);
 
-    int *t = *(&array + 1);
-    int *f = array;
-    int length_of_array = t - f;
+    int *t = *(&array + 1); // TYPECAST INT *[6] TO INT *
+    int *f = array; // INT *
+    int length_of_array = t - f; // INTEGER POINTERS DIFFERNCE SO GIVES THE LENGTH
     printf("\n t : %d\n", t);
     printf("\n f : %d\n", f);
     printf("\n *t : %d\n", *t);
