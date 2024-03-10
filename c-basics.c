@@ -40,13 +40,27 @@ int main(){
     printf("\nstrcat s = %s\n", s);
 
     // INPUT
-    int input_i;
-    char input_c;
+    int input_i,input_j;
     printf("Enter number: ");
     scanf("%d", &input_i);
+    printf("Enter number j : ");
+    scanf("%d", &input_j);
+    printf("\ninputs i = %d\tc = %d\n", input_i, input_j);
+    char input_C;
     printf("Enter character: ");
-    scanf("%c", &input_c);
-    printf("\ninputs i = %d\tc = %c\n", input_i, input_c);
+    scanf("%c", &input_C); // enter key pressed for previous scanf will be taken as input for character
+    printf("\ninputs (gets new line) c = %c\n", input_C); // prints new line
+    printf("Enter character: ");
+    scanf(" %c", &input_C);
+    printf("\ninputs c = %c\n", input_C);
+    char input_s[10];
+    getchar(); // Hack to handle new line character
+    printf("\nEnter string gets: ");
+    gets(input_s); //Checks for new line
+    printf("\ninputs s = %s\n", input_s);
+    printf("\nEnter string fgets: ");
+    fgets(input_s, 5, stdin); //Check for EOF or max len in second param
+    printf("\nfgetc inputs s = %s\n", input_s);
 
     return 0;
 }
