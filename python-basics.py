@@ -30,6 +30,67 @@ print(x, left_shift, right_shift)
 def main():
     print("This is from main method")
 
+    # LIST
+    list_item = ['orange', 123, True, 1, 'hello', 123]
+    list_item[-1] = 456
+    print(list_item)
+    print(type(list_item))
+    new_list = list(('h','e'))
+    print(new_list)
+
+    #TUPLE
+    tuple_item = ("hello", 123, 123)
+    print(tuple_item, type(tuple_item))
+
+    # SET
+    set_item = set(('hey', 'bro', True, 1))
+    print(set_item, type(set_item)) # {'hey', True,'bro'}
+    set_item.add('baby')
+    print(set_item)
+    set_item.update(tuple_item)
+    set_item.update(new_list)
+    print(set_item)
+    set_item_union = set_item.union(list_item)
+    print(set_item_union)
+    set_item_union.intersection_update(new_list)
+    print(set_item_union)
+    x = {1,2,3}
+    y={4,5,6, 1, 2,3}
+    z = x.symmetric_difference(y)
+    print(z)
+
+    #DICTIONARIES
+    dict_item = {"a": "hello", "b": "baby", "c": 123}
+    print(dict_item, type(dict_item))
+    print(dict_item["c"])
+    print(dict_item.keys(), dict_item.values())
+    for g in dict_item:
+        print(g, dict_item[g])
+    for k,v in dict_item.items():
+        print(k,v)
+
+
+def checkLambda(n):
+    print('n', n)
+    return lambda a: a*n
+result = checkLambda(2)
+print('>>>> result ',result(1))
+print('>>>> result ',result(2))
+print('>>>> result ',result(3))
+print('>>>> result ',result(4))
+print('>>>> result ',result(5))
+print('>>>> result ',result(6))
+
+class pythonClass:
+    def __init__(self, height, width):
+        self.height = height
+        self.width = width
+obj = pythonClass(100, 50)
+print('----------object' , obj.height)
+obj.height = 40
+print('----------object' , obj.height)
+
 if __name__ == "__main__":
     main()
+
     
