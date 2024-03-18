@@ -21,6 +21,9 @@ print('typcase ', type_cast , type(type_cast))
 f = 12.890
 type_cast1 = str(f)
 print('typcase ', type_cast1)
+float_div_Val = 13/6 #6.5
+int_div_val = 12//6 #6
+float_div_val_1 = 12//6 #6.0
 
 x = 123
 left_shift = x << 3 # g = x * 2^3
