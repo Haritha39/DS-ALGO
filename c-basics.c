@@ -114,5 +114,15 @@ int main(){
     printf("\n *f : %d\n", *f);
     printf("\n simple length p-f : %d\n", length_of_array);
 
+    //ARRAY LENGTH VS CAPACITY
+    int capacity_Arr[50];
+    int length_of = 0;
+    for(int i=0;i < 5; i++){
+        capacity_Arr[i] = i*1;
+        length_of++;
+    }
+    printf("capacity of array : %d",*(&capacity_Arr + 1 ) - capacity_Arr); //50
+    printf("length of arrya : %d", length_of); // 5
+
     return 0;
 }
