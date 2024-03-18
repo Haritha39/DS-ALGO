@@ -67,7 +67,7 @@ int main(){
     printf("\n ARRAY \n");
     printf("\n size of array int(4 bytes) : %d\n", sizeof(array));
     for(int k=0; k<(sizeof(array)/ sizeof(array[0])) ; k++){
-        printf("%d\t", array[k]);
+        printf("k %d\t", array[k]);
     }
     /* Basically, “array” is a “pointer to the first element of array” but “&array” is a “pointer to whole array of 5 int”. 
     Since “array” is pointer to int, addition of 1 resulted in an address with increment of 4 (assuming int size in your machine is 4 bytes). 
