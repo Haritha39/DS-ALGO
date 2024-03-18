@@ -37,6 +37,7 @@ def main():
     print(type(list_item))
     new_list = list(('h','e'))
     print(new_list)
+    print("length of list", len(new_list))
 
     #TUPLE
     tuple_item = ("hello", 123, 123)
