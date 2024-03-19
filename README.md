@@ -8,5 +8,9 @@ Data Structures and alogrithms from Geeks for Geeks and other websites which are
     Open command prompt and run this command
     gcc filename.c
     a.exe
+# python
+    install python and add path to env in windows
+    To open python command line : python
+    Run python file: python filename.py
 
 
