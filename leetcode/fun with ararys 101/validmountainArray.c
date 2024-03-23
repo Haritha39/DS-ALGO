@@ -8,7 +8,7 @@
 // arr[i] > arr[i + 1] > ... > arr[arr.length - 1]
 #include<stdbool.h>
 bool validMountainArray(int* arr, int arrSize){
-    if(arrSize <3){
+    if(arr == NULL || arrSize <3){
         return false;
     }
     int left=0;

@@ -7,7 +7,7 @@
 #include<stdbool.h>
 bool checkIfExist(int* arr, int arrSize) {
     //Pre checks
-    if(arrSize <2 || arrSize > 500){
+    if(arr == NULL || arrSize <2 || arrSize > 500){
         return false;
     }
     //USING TWO LOOPS - 6s
